@@ -30,3 +30,39 @@ python3 -m http.server 45217
 ```
 
 然后访问 http://127.0.0.1:45217/
+
+本地预览 Cloudflare 部署效果：
+
+```bash
+npm install
+npm run dev
+```
+
+## 部署到 Cloudflare（免费 `workers.dev` 域名）
+
+Cloudflare 不提供免费的 `.com` 之类注册域名，但每个账号都有免费的 `*.workers.dev` 子域名。本仓库用 Workers 静态资源托管，部署后地址形如：
+
+`https://html-exp2.<你的子域>.workers.dev`
+
+### 第一次部署（无需事先注册）
+
+未登录时可用临时账号立刻上线，命令会打印 **站点 URL** 和 **认领链接**（认领链接相当于所有权凭证，60 分钟内有效，不要发到公开仓库或群聊）：
+
+```bash
+npx wrangler deploy --temporary
+```
+
+打开认领链接，登录或注册 Cloudflare，即可把临时账号和这个站点收成自己的永久账号。
+
+### 已有 Cloudflare 账号
+
+1. 在 [Cloudflare Dashboard](https://dash.cloudflare.com/) 创建 API Token（权限包含 `Workers Scripts Edit` 和 `Account Settings Read`）
+2. 把 Token 和 Account ID 配到环境变量，或写入 GitHub Secrets：`CLOUDFLARE_API_TOKEN`、`CLOUDFLARE_ACCOUNT_ID`
+3. 部署：
+
+```bash
+npx wrangler login
+npm run deploy
+```
+
+`main` 分支推送后，`.github/workflows/deploy.yml` 也会自动部署。
