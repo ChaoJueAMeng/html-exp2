@@ -44,27 +44,25 @@ Cloudflare 不提供免费的 `.com` 之类注册域名，但每个账号都有�
 
 `https://html-exp2.<你的子域>.workers.dev`
 
+**改 HTML 之后不会自动上线**，除非已经把 GitHub 接到 Cloudflare。临时 `wrangler deploy --temporary` 只是一次性发布，和 Git 没有关系。
+
+### 推荐：在 Cloudflare 里连接这个 GitHub 仓库
+
+连上之后，向 `main` 推送就会自动构建并部署：
+
+1. 打开 [Workers 和 Pages](https://dash.cloudflare.com/?to=/:account/workers-and-pages)
+2. 选中 Worker `html-exp2`（没有就先 **导入仓库** 创建，名称必须和 `wrangler.jsonc` 里的 `html-exp2` 一致）
+3. **设置 → Builds → Connect**，授权 GitHub，选择仓库 `ChaoJueAMeng/html-exp2`
+4. 生产分支填 `main`，部署命令用 `npx wrangler deploy`
+5. 保存后再往 `main` 推一次，就会自动更新线上页面
+
+也可以走 GitHub Actions：把 `CLOUDFLARE_API_TOKEN`、`CLOUDFLARE_ACCOUNT_ID` 加到仓库 Secrets，合并本仓库的 `deploy.yml` 后，推送 `main` 同样会自动部署。
+
 如果浏览器报 `ERR_SSL_VERSION_OR_CIPHER_MISMATCH`（不受支持的协议），说明这个 `workers.dev` 子域还没有签出 HTTPS 证书。`workers.dev` 已加入 HSTS 预加载，手机和电脑都会强制走 HTTPS，证书缺失时页面就打不开。换一个已签发证书的子域重新部署即可。
 
-### 第一次部署（无需事先注册）
-
-未登录时可用临时账号立刻上线，命令会打印 **站点 URL** 和 **认领链接**（认领链接相当于所有权凭证，60 分钟内有效，不要发到公开仓库或群聊）：
-
-```bash
-npx wrangler deploy --temporary
-```
-
-打开认领链接，登录或注册 Cloudflare，即可把临时账号和这个站点收成自己的永久账号。
-
-### 已有 Cloudflare 账号
-
-1. 在 [Cloudflare Dashboard](https://dash.cloudflare.com/) 创建 API Token（权限包含 `Workers Scripts Edit` 和 `Account Settings Read`）
-2. 把 Token 和 Account ID 配到环境变量，或写入 GitHub Secrets：`CLOUDFLARE_API_TOKEN`、`CLOUDFLARE_ACCOUNT_ID`
-3. 部署：
+### 本地手动部署
 
 ```bash
 npx wrangler login
 npm run deploy
 ```
-
-`main` 分支推送后，`.github/workflows/deploy.yml` 也会自动部署。
