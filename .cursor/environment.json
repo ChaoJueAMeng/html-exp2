@@ -1,0 +1,13 @@
+{
+  "name": "html-exp2",
+  "ports": [
+    { "name": "static server", "port": 45217 }
+  ],
+  "terminals": [
+    {
+      "name": "static-server",
+      "command": "python3 -m http.server 45217",
+      "description": "在项目根目录提供静态 HTML 页面，浏览器访问 http://127.0.0.1:45217/ 查看实验 2 的三个页面。"
+    }
+  ]
+}
