@@ -44,6 +44,8 @@ Cloudflare 不提供免费的 `.com` 之类注册域名，但每个账号都有�
 
 `https://html-exp2.<你的子域>.workers.dev`
 
+如果浏览器报 `ERR_SSL_VERSION_OR_CIPHER_MISMATCH`（不受支持的协议），说明这个 `workers.dev` 子域还没有签出 HTTPS 证书。`workers.dev` 已加入 HSTS 预加载，手机和电脑都会强制走 HTTPS，证书缺失时页面就打不开。换一个已签发证书的子域重新部署即可。
+
 ### 第一次部署（无需事先注册）
 
 未登录时可用临时账号立刻上线，命令会打印 **站点 URL** 和 **认领链接**（认领链接相当于所有权凭证，60 分钟内有效，不要发到公开仓库或群聊）：
