@@ -23,15 +23,14 @@
 
 ## 在线访问（GitHub Pages）
 
-推送到 `main` 后会自动部署，站点地址：
+站点地址：
 
-https://chaojueameng.github.io/html-exp2/
-
-- 首页：https://chaojueameng.github.io/html-exp2/
+- 首页：https://chaojueameng.github.io/
+- 实验目录：https://chaojueameng.github.io/html-exp2/
 - 实验 2.1：https://chaojueameng.github.io/html-exp2/exp_2_1.html
 - 实验 2.2：https://chaojueameng.github.io/html-exp2/exp_2_2.html
 
-也可在仓库的 Actions 页手动运行 **Deploy GitHub Pages** 工作流。
+本仓库推送到 `main` 后，会尝试发布项目 Pages；个人站点仓库 `ChaoJueAMeng.github.io` 会同步这些静态文件。也可在 Actions 页手动运行 **Deploy GitHub Pages**。
 
 ## 本地打开
 
