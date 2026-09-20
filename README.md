@@ -21,6 +21,18 @@
 <p class="sign">学号：__________　姓名：__________</p>
 ```
 
+## 在线访问（GitHub Pages）
+
+推送到 `main` 后会自动部署，站点地址：
+
+https://chaojueameng.github.io/html-exp2/
+
+- 首页：https://chaojueameng.github.io/html-exp2/
+- 实验 2.1：https://chaojueameng.github.io/html-exp2/exp_2_1.html
+- 实验 2.2：https://chaojueameng.github.io/html-exp2/exp_2_2.html
+
+也可在仓库的 Actions 页手动运行 **Deploy GitHub Pages** 工作流。
+
 ## 本地打开
 
 用浏览器直接打开 `exp_2_1.html` / `exp_2_2.html` 即可。也可以在本目录启动本地服务：
