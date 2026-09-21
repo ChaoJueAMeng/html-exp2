@@ -29,7 +29,7 @@
 - 实验 2.1：https://chaojueameng.github.io/html-exp2/exp_2_1.html
 - 实验 2.2：https://chaojueameng.github.io/html-exp2/exp_2_2.html
 
-https://chaojueameng.github.io/ 会跳转到萌实验室 https://chaojueameng.github.io/meng-lab/，不是本实验。静态文件托管在 [ChaoJueAMeng.github.io](https://github.com/ChaoJueAMeng/ChaoJueAMeng.github.io) 的 `html-exp2/` 目录。更新本仓库 `main` 后，可在该仓库 Actions 中手动运行 **Sync html-exp2**，或等待每日自动同步。
+https://chaojueameng.github.io/ 是萌实验室站点，不是本实验。静态文件托管在 [ChaoJueAMeng.github.io](https://github.com/ChaoJueAMeng/ChaoJueAMeng.github.io) 的 `html-exp2/` 目录。
 
 ## 本地打开
 
