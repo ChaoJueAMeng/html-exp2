@@ -23,13 +23,16 @@
 
 ## 在线访问（GitHub Pages）
 
-实验2 页面在子路径：
+站点地址：
 
-- 实验2 首页：https://chaojueameng.github.io/html-exp2/
+- 首页：https://chaojueameng.github.io/
+- 实验目录：https://chaojueameng.github.io/html-exp2/
 - 实验 2.1：https://chaojueameng.github.io/html-exp2/exp_2_1.html
 - 实验 2.2：https://chaojueameng.github.io/html-exp2/exp_2_2.html
 
-https://chaojueameng.github.io/ 是萌实验室站点，不是本实验。静态文件托管在 [ChaoJueAMeng.github.io](https://github.com/ChaoJueAMeng/ChaoJueAMeng.github.io) 的 `html-exp2/` 目录。
+`https://chaojueameng.github.io/` 是个人站点首页，本实验在 `html-exp2/` 子路径。
+
+本仓库推送到 `main` 后，会尝试发布项目 Pages；个人站点仓库 `ChaoJueAMeng.github.io` 会同步这些静态文件。也可在 Actions 页手动运行 **Deploy GitHub Pages**。
 
 ## 本地打开
 
