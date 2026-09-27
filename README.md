@@ -30,6 +30,8 @@
 - 实验 2.1：https://chaojueameng.github.io/html-exp2/exp_2_1.html
 - 实验 2.2：https://chaojueameng.github.io/html-exp2/exp_2_2.html
 
+`https://chaojueameng.github.io/` 是个人站点首页，本实验在 `html-exp2/` 子路径。
+
 本仓库推送到 `main` 后，会尝试发布项目 Pages；个人站点仓库 `ChaoJueAMeng.github.io` 会同步这些静态文件。也可在 Actions 页手动运行 **Deploy GitHub Pages**。
 
 ## 本地打开
